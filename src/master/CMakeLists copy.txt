@@ -1,0 +1,18 @@
+add_library(master 
+    # node_register.cpp
+    # node_selector.cpp
+    heartbeat_server.cpp
+    nodeManager.cpp
+    )
+
+target_include_directories(master
+    PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/datanode
+    ${CMAKE_SOURCE_DIR}/include/master
+    )
+
+target_link_libraries(master
+    PUBLIC
+    "/usr/local/lib/libmuduo_net.a" 
+    "/usr/local/lib/libmuduo_base.a"
+)

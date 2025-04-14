@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblocal_node_info.a CMakeFiles/local_node_info.dir/local_node_info.cpp.o
+/usr/bin/ranlib liblocal_node_info.a

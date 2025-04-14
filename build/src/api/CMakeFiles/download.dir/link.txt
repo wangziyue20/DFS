@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/download.dir/download_server.cpp.o -o download  -Wl,-rpath,/usr/local/lib ../datanode/libselector.a ../storage/libstorage.a -luuid ../master/libmaster.a -lcurl -lmysqlclient /usr/local/lib/libhiredis.so 

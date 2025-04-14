@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstorage.a CMakeFiles/storage.dir/file_manager.cpp.o CMakeFiles/storage.dir/mysql_client.cpp.o CMakeFiles/storage.dir/redis_client.cpp.o
+/usr/bin/ranlib libstorage.a

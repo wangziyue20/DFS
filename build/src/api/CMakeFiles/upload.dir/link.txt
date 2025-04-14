@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/upload.dir/upload_server.cpp.o -o upload  -Wl,-rpath,/usr/local/lib ../datanode/libselector.a ../storage/libstorage.a -luuid ../master/libmaster.a -lcurl -lmysqlclient /usr/local/lib/libhiredis.so 

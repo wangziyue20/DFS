@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmaster.a CMakeFiles/master.dir/global_node_manager.cpp.o CMakeFiles/master.dir/nodeManager.cpp.o
+/usr/bin/ranlib libmaster.a

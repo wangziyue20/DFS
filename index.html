@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+    <h2>File Upload</h2>
+    <!-- 上传文件表单 -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="file">Choose a file:</label>
+        <input type="file" name="file" id="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <script>
+        // 当表单提交时，使用 JavaScript 阻止默认提交并进行文件上传
+        document.getElementById("uploadForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // 阻止表单的默认提交行为
+
+            let formData = new FormData();  // 创建 FormData 对象
+            let fileInput = document.getElementById("file");  // 获取文件输入框
+
+            // 把文件添加到 FormData 对象中
+            formData.append("file", fileInput.files[0]);
+
+            // 使用 Fetch API 发送 POST 请求到上传接口
+            fetch("/upload", {
+                method: "POST",  // 请求方法是 POST
+                body: formData  // 请求体是 FormData 对象，包含文件
+            })
+            .then(response => response.text())  // 解析服务器响应
+            .then(data => {
+                alert("File uploaded successfully: " + data);  // 成功后提示用户
+            })
+            .catch(error => {
+                alert("Error uploading file: " + error);  // 错误时提示
+            });
+        });
+    </script>
+</body>
+</html>

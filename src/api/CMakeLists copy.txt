@@ -1,0 +1,47 @@
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+
+add_executable(upload_server
+    upload_server.cpp 
+    upload_manager.cpp
+)
+
+add_executable(download_server
+    download_server.cpp 
+    download_manager.cpp
+)
+
+target_compile_definitions(upload_server PRIVATE CROW_USE_BOOST)
+target_compile_definitions(download_server PRIVATE CROW_USE_BOOST)
+# add_definitions(-DCROW_ENABLE_MULTIPART)
+
+# 包含 storage 目录
+target_include_directories(upload_server
+    PUBLIC 
+    ${CMAKE_SOURCE_DIR}/third_party/Crow/include
+    ${CMAKE_SOURCE_DIR}/include/storage
+    ${CMAKE_SOURCE_DIR}/include/api
+    ${CMAKE_SOURCE_DIR}/include/datanode
+    )
+
+# 链接 storage 库 和 muduo
+target_link_libraries(upload_server
+    PUBLIC
+    storage
+    uuid
+    datanode
+)
+
+target_include_directories(download_server
+    PUBLIC 
+    ${CMAKE_SOURCE_DIR}/third_party/Crow/include
+    ${CMAKE_SOURCE_DIR}/include/storage
+    ${CMAKE_SOURCE_DIR}/include/api
+    ${CMAKE_SOURCE_DIR}/include/datanode
+    )
+
+# 链接 storage 库 和 muduo
+target_link_libraries(download_server
+    PUBLIC
+    storage
+)

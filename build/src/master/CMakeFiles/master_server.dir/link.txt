@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/master_server.dir/heartbeat_server.cpp.o CMakeFiles/master_server.dir/master_server.cpp.o -o master_server  libmaster.a /usr/local/lib/libmuduo_net.a /usr/local/lib/libmuduo_base.a 

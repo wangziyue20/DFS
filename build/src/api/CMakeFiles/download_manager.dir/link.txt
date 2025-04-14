@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdownload_manager.a CMakeFiles/download_manager.dir/download_manager.cpp.o
+/usr/bin/ranlib libdownload_manager.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libupload_manager.a CMakeFiles/upload_manager.dir/upload_manager.cpp.o
+/usr/bin/ranlib libupload_manager.a
