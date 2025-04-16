@@ -172,6 +172,44 @@ download_manager/fast:
 	cd /home/book/Desktop/chat/proj/build && $(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/download_manager.dir/build.make src/api/CMakeFiles/download_manager.dir/build
 .PHONY : download_manager/fast
 
+# Convenience name for target.
+src/api/CMakeFiles/delete.dir/rule:
+	cd /home/book/Desktop/chat/proj/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/api/CMakeFiles/delete.dir/rule
+.PHONY : src/api/CMakeFiles/delete.dir/rule
+
+# Convenience name for target.
+delete: src/api/CMakeFiles/delete.dir/rule
+.PHONY : delete
+
+# fast build rule for target.
+delete/fast:
+	cd /home/book/Desktop/chat/proj/build && $(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/delete.dir/build.make src/api/CMakeFiles/delete.dir/build
+.PHONY : delete/fast
+
+delete_server.o: delete_server.cpp.o
+.PHONY : delete_server.o
+
+# target to build an object file
+delete_server.cpp.o:
+	cd /home/book/Desktop/chat/proj/build && $(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/delete.dir/build.make src/api/CMakeFiles/delete.dir/delete_server.cpp.o
+.PHONY : delete_server.cpp.o
+
+delete_server.i: delete_server.cpp.i
+.PHONY : delete_server.i
+
+# target to preprocess a source file
+delete_server.cpp.i:
+	cd /home/book/Desktop/chat/proj/build && $(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/delete.dir/build.make src/api/CMakeFiles/delete.dir/delete_server.cpp.i
+.PHONY : delete_server.cpp.i
+
+delete_server.s: delete_server.cpp.s
+.PHONY : delete_server.s
+
+# target to generate assembly for a file
+delete_server.cpp.s:
+	cd /home/book/Desktop/chat/proj/build && $(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/delete.dir/build.make src/api/CMakeFiles/delete.dir/delete_server.cpp.s
+.PHONY : delete_server.cpp.s
+
 download_manager.o: download_manager.cpp.o
 .PHONY : download_manager.o
 
@@ -276,10 +314,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... delete"
 	@echo "... download"
 	@echo "... download_manager"
 	@echo "... upload"
 	@echo "... upload_manager"
+	@echo "... delete_server.o"
+	@echo "... delete_server.i"
+	@echo "... delete_server.s"
 	@echo "... download_manager.o"
 	@echo "... download_manager.i"
 	@echo "... download_manager.s"

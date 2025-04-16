@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.26.4/CMakeSystem.cmake"
   "/home/book/Desktop/chat/proj/src/CMakeLists.txt"
   "/home/book/Desktop/chat/proj/src/api/CMakeLists.txt"
+  "/home/book/Desktop/chat/proj/src/common/CMakeLists.txt"
   "/home/book/Desktop/chat/proj/src/datanode/CMakeLists.txt"
   "/home/book/Desktop/chat/proj/src/master/CMakeLists.txt"
   "/home/book/Desktop/chat/proj/src/storage/CMakeLists.txt"
@@ -33,8 +34,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake"
   "/usr/local/share/cmake-3.26/Modules/Compiler/GNU.cmake"
   "/usr/local/share/cmake-3.26/Modules/FindBoost.cmake"
+  "/usr/local/share/cmake-3.26/Modules/FindOpenSSL.cmake"
   "/usr/local/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+  "/usr/local/share/cmake-3.26/Modules/FindPkgConfig.cmake"
   "/usr/local/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/local/share/cmake-3.26/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/local/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake"
@@ -52,6 +55,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/common/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/storage/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/api/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/datanode/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -60,11 +64,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "src/common/CMakeFiles/common.dir/DependInfo.cmake"
   "src/storage/CMakeFiles/storage.dir/DependInfo.cmake"
   "src/api/CMakeFiles/upload.dir/DependInfo.cmake"
   "src/api/CMakeFiles/download.dir/DependInfo.cmake"
   "src/api/CMakeFiles/upload_manager.dir/DependInfo.cmake"
   "src/api/CMakeFiles/download_manager.dir/DependInfo.cmake"
+  "src/api/CMakeFiles/delete.dir/DependInfo.cmake"
   "src/datanode/CMakeFiles/local_node_info.dir/DependInfo.cmake"
   "src/datanode/CMakeFiles/datanode_main.dir/DependInfo.cmake"
   "src/datanode/CMakeFiles/selector.dir/DependInfo.cmake"

@@ -54,4 +54,8 @@ std::string FileManager::readFile(const std::string &path) {
 
   return data;
 }
+
+bool FileManager::deleteFile(const std::string &path) {
+  return fs::remove(path) == 0;
+}
 } // namespace dfs

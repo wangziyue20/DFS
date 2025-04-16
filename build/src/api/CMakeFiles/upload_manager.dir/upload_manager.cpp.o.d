@@ -1188,5 +1188,4 @@ src/api/CMakeFiles/upload_manager.dir/upload_manager.cpp.o: \
  /usr/include/mysql/errmsg.h \
  /home/book/Desktop/chat/proj/include/storage/redis_client.h \
  /usr/local/include/hiredis/hiredis.h /usr/local/include/hiredis/read.h \
- /usr/local/include/hiredis/sds.h /usr/local/include/hiredis/alloc.h \
- /usr/include/uuid/uuid.h
+ /usr/local/include/hiredis/sds.h /usr/local/include/hiredis/alloc.h

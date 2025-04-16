@@ -20,6 +20,8 @@ class NodeSelector {
 public:
   explicit NodeSelector(const std::string &master_utl);
   NodeInfo select();
+  std::vector<NodeInfo> selectN(int count);
+  std::vector<NodeInfo> selectAll();
 
 private:
   std::vector<NodeInfo> fetchNodes();

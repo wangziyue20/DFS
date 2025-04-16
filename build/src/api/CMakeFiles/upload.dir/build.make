@@ -92,9 +92,12 @@ upload_EXTERNAL_OBJECTS =
 
 src/api/upload: src/api/CMakeFiles/upload.dir/upload_server.cpp.o
 src/api/upload: src/api/CMakeFiles/upload.dir/build.make
+src/api/upload: /usr/lib/x86_64-linux-gnu/libcrypto.so
+src/api/upload: src/common/libcommon.a
 src/api/upload: src/datanode/libselector.a
 src/api/upload: src/storage/libstorage.a
 src/api/upload: src/master/libmaster.a
+src/api/upload: /usr/lib/x86_64-linux-gnu/libcrypto.so
 src/api/upload: /usr/local/lib/libhiredis.so
 src/api/upload: src/api/CMakeFiles/upload.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable upload"

@@ -118,6 +118,9 @@ src/datanode/datanode_main: src/datanode/libselector.a
 src/datanode/datanode_main: src/storage/libstorage.a
 src/datanode/datanode_main: /usr/local/lib/libhiredis.so
 src/datanode/datanode_main: src/master/libmaster.a
+src/datanode/datanode_main: /usr/lib/x86_64-linux-gnu/libcrypto.so
+src/datanode/datanode_main: src/common/libcommon.a
+src/datanode/datanode_main: /usr/lib/x86_64-linux-gnu/libcrypto.so
 src/datanode/datanode_main: src/datanode/CMakeFiles/datanode_main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable datanode_main"
 	cd /home/book/Desktop/chat/proj/build/src/datanode && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/datanode_main.dir/link.txt --verbose=$(VERBOSE)

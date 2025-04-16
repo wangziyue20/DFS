@@ -10,5 +10,6 @@ public:
                               const std::string &data);
   static size_t getFileSize(const std::string &data);
   static std::string readFile(const std::string &filename);
+  static bool deleteFile(const std::string &path);
 };
 } // namespace dfs

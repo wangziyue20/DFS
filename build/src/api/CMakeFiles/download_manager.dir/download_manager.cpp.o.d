@@ -1172,7 +1172,25 @@ src/api/CMakeFiles/download_manager.dir/download_manager.cpp.o: \
  /home/book/Desktop/chat/proj/third_party/Crow/include/crow/version.h \
  /home/book/Desktop/chat/proj/third_party/Crow/include/crow/app.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/this_thread_sleep.h \
+ /home/book/Desktop/chat/proj/include/common/calculateSHA.h \
+ /usr/include/openssl/evp.h /usr/include/openssl/macros.h \
+ /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
+ /usr/include/x86_64-linux-gnu/openssl/configuration.h \
+ /usr/include/openssl/opensslv.h /usr/include/openssl/types.h \
+ /usr/include/openssl/e_os2.h /usr/include/openssl/safestack.h \
+ /usr/include/openssl/stack.h /usr/include/openssl/core.h \
+ /usr/include/openssl/core_dispatch.h /usr/include/openssl/symhacks.h \
+ /usr/include/openssl/bio.h /usr/include/openssl/crypto.h \
+ /usr/include/c++/11/stdlib.h /usr/include/openssl/cryptoerr.h \
+ /usr/include/openssl/cryptoerr_legacy.h /usr/include/openssl/bioerr.h \
+ /usr/include/openssl/evperr.h /usr/include/openssl/params.h \
+ /usr/include/openssl/bn.h /usr/include/openssl/bnerr.h \
+ /usr/include/openssl/objects.h /usr/include/openssl/obj_mac.h \
+ /usr/include/openssl/asn1.h /usr/include/openssl/asn1err.h \
+ /usr/include/openssl/objectserr.h \
  /home/book/Desktop/chat/proj/include/storage/file_manager.h \
+ /home/book/Desktop/chat/proj/include/datanode/local_node_info.h \
+ /home/book/Desktop/chat/proj/include/datanode/node_selector.h \
  /home/book/Desktop/chat/proj/include/storage/mysql_client.h \
  /usr/include/mysql/mysql.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
@@ -1180,7 +1198,7 @@ src/api/CMakeFiles/download_manager.dir/download_manager.cpp.o: \
  /usr/include/mysql/mysql_com.h /usr/include/mysql/my_command.h \
  /usr/include/mysql/my_compress.h \
  /usr/include/mysql/udf_registration_types.h \
- /usr/include/mysql/client_plugin.h /usr/include/c++/11/stdlib.h \
+ /usr/include/mysql/client_plugin.h \
  /usr/include/mysql/plugin_auth_common.h \
  /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
  /usr/include/mysql/errmsg.h \

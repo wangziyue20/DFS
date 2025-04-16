@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named common
+
+# Build rule for target.
+common: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common
+.PHONY : common
+
+# fast build rule for target.
+common/fast:
+	$(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/build
+.PHONY : common/fast
+
+#=============================================================================
 # Target rules for targets named storage
 
 # Build rule for target.
@@ -180,6 +193,19 @@ download_manager: cmake_check_build_system
 download_manager/fast:
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/download_manager.dir/build.make src/api/CMakeFiles/download_manager.dir/build
 .PHONY : download_manager/fast
+
+#=============================================================================
+# Target rules for targets named delete
+
+# Build rule for target.
+delete: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 delete
+.PHONY : delete
+
+# fast build rule for target.
+delete/fast:
+	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/delete.dir/build.make src/api/CMakeFiles/delete.dir/build
+.PHONY : delete/fast
 
 #=============================================================================
 # Target rules for targets named local_node_info
@@ -254,7 +280,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... common"
 	@echo "... datanode_main"
+	@echo "... delete"
 	@echo "... download"
 	@echo "... download_manager"
 	@echo "... local_node_info"

@@ -1,5 +1,6 @@
 #include "crow.h"
 #include "download_manager.h"
+#include "file_manager.h"
 #include "heartbeat_client.h"
 #include "local_node_info.h"
 #include "upload_manager.h"
@@ -71,9 +72,21 @@ int main(int argc, char **argv) {
 
     //文件下载
     CROW_ROUTE(app, "/internal_download/<string>")
-    ([](const crow::request &req, std::string id) {
-      return dfs::DownloadManager::downloadById(id);
-    });
+        .methods("GET"_method)([](const crow::request &req, std::string id) {
+          return dfs::DownloadManager::downloadById(id);
+        });
+
+    //文件移除
+    CROW_ROUTE(app, "/internal_delete/<string>")
+        .methods("POST"_method)([&](const crow::request &req, std::string id) {
+          std::string path = cfg.storage_path + "/" + id;
+          bool ok = dfs::FileManager::deleteFile(path);
+          if (ok) {
+            return crow::response(200, "Delete successfully");
+          } else {
+            return crow::response(500, "File not found");
+          }
+        });
 
     // 启动服务器
     app.port(cfg.port).multithreaded().run();

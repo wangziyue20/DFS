@@ -1281,7 +1281,69 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
   /home/book/Desktop/chat/proj/third_party/Crow/include/crow/app.h \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/this_thread_sleep.h \
-  /home/book/Desktop/chat/proj/include/api/download_manager.h \
+  /home/book/Desktop/chat/proj/third_party/cpp-httplib/httplib.h \
+  /usr/include/ifaddrs.h \
+  /usr/include/resolv.h \
+  /usr/include/x86_64-linux-gnu/sys/param.h \
+  /usr/include/x86_64-linux-gnu/bits/param.h \
+  /usr/include/linux/param.h \
+  /usr/include/x86_64-linux-gnu/asm/param.h \
+  /usr/include/asm-generic/param.h \
+  /usr/include/arpa/nameser.h \
+  /usr/include/arpa/nameser_compat.h \
+  /usr/include/x86_64-linux-gnu/bits/types/res_state.h \
+  /usr/include/x86_64-linux-gnu/sys/mman.h \
+  /usr/include/x86_64-linux-gnu/bits/mman.h \
+  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/regex \
+  /usr/include/c++/11/bitset \
+  /usr/include/c++/11/stack \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_stack.h \
+  /usr/include/c++/11/bits/regex_constants.h \
+  /usr/include/c++/11/bits/regex_error.h \
+  /usr/include/c++/11/bits/regex_automaton.h \
+  /usr/include/c++/11/bits/regex_automaton.tcc \
+  /usr/include/c++/11/bits/regex_scanner.h \
+  /usr/include/c++/11/bits/regex_scanner.tcc \
+  /usr/include/c++/11/bits/regex_compiler.h \
+  /usr/include/c++/11/bits/regex_compiler.tcc \
+  /usr/include/c++/11/bits/regex.h \
+  /usr/include/c++/11/bits/regex.tcc \
+  /usr/include/c++/11/bits/regex_executor.h \
+  /usr/include/c++/11/bits/regex_executor.tcc \
+  /usr/include/c++/11/set \
+  /usr/include/c++/11/bits/stl_set.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
+  /usr/include/c++/11/unordered_set \
+  /usr/include/c++/11/bits/unordered_set.h \
+  /home/book/Desktop/chat/proj/include/storage/mysql_client.h \
+  /usr/include/mysql/mysql.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
+  /usr/include/mysql/field_types.h \
+  /usr/include/mysql/my_list.h \
+  /usr/include/mysql/mysql_com.h \
+  /usr/include/mysql/my_command.h \
+  /usr/include/mysql/my_compress.h \
+  /usr/include/mysql/udf_registration_types.h \
+  /usr/include/mysql/client_plugin.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/mysql/plugin_auth_common.h \
+  /usr/include/mysql/mysql_version.h \
+  /usr/include/mysql/mysql_time.h \
+  /usr/include/mysql/errmsg.h \
+  /home/book/Desktop/chat/proj/include/storage/redis_client.h \
+  /usr/local/include/hiredis/hiredis.h \
+  /usr/local/include/hiredis/read.h \
+  /usr/local/include/hiredis/sds.h \
+  /usr/local/include/hiredis/alloc.h \
   /usr/include/nlohmann/json.hpp \
   /usr/include/nlohmann/adl_serializer.hpp \
   /usr/include/nlohmann/detail/conversions/from_json.hpp \
@@ -1360,8 +1422,6 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/nlohmann/detail/input/input_adapters.hpp:
 
-/usr/include/nlohmann/detail/input/binary_reader.hpp:
-
 /usr/include/nlohmann/detail/hash.hpp:
 
 /usr/include/nlohmann/byte_container_with_subtype.hpp:
@@ -1373,8 +1433,6 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/nlohmann/detail/meta/type_traits.hpp:
 
 /usr/include/nlohmann/detail/meta/identity_tag.hpp:
-
-/usr/include/nlohmann/detail/meta/cpp_future.hpp:
 
 /usr/include/nlohmann/detail/meta/void_t.hpp:
 
@@ -1402,6 +1460,74 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/nlohmann/json.hpp:
 
+/usr/local/include/hiredis/sds.h:
+
+/usr/local/include/hiredis/hiredis.h:
+
+/usr/include/mysql/mysql_time.h:
+
+/usr/include/c++/11/stdlib.h:
+
+/usr/include/mysql/my_compress.h:
+
+/usr/include/mysql/my_command.h:
+
+/usr/include/mysql/mysql.h:
+
+/usr/include/c++/11/bits/unordered_set.h:
+
+/usr/include/c++/11/bits/stl_set.h:
+
+/usr/include/c++/11/bits/regex_executor.tcc:
+
+/usr/include/c++/11/bits/regex_executor.h:
+
+/usr/include/c++/11/bits/regex_compiler.tcc:
+
+/usr/include/c++/11/bits/regex_compiler.h:
+
+/usr/include/c++/11/bits/regex_scanner.h:
+
+/usr/include/nlohmann/detail/meta/cpp_future.hpp:
+
+/usr/include/c++/11/bits/regex_automaton.h:
+
+/usr/include/c++/11/bits/regex_constants.h:
+
+/usr/include/c++/11/bits/stl_stack.h:
+
+/usr/include/c++/11/bits/deque.tcc:
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/c++/11/stack:
+
+/usr/include/c++/11/bitset:
+
+/usr/include/c++/11/bits/list.tcc:
+
+/usr/include/c++/11/list:
+
+/usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h:
+
+/usr/local/include/hiredis/alloc.h:
+
+/usr/include/x86_64-linux-gnu/bits/mman.h:
+
+/usr/include/x86_64-linux-gnu/sys/mman.h:
+
+/usr/include/arpa/nameser_compat.h:
+
+/usr/include/arpa/nameser.h:
+
+/usr/include/linux/param.h:
+
+/usr/include/resolv.h:
+
+/usr/include/nlohmann/detail/input/binary_reader.hpp:
+
+/usr/include/ifaddrs.h:
+
 /usr/include/c++/11/bits/this_thread_sleep.h:
 
 /usr/include/c++/11/thread:
@@ -1409,6 +1535,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /home/book/Desktop/chat/proj/third_party/Crow/include/crow/app.h:
 
 /home/book/Desktop/chat/proj/third_party/Crow/include/crow/http_server.h:
+
+/usr/include/c++/11/unordered_set:
 
 /home/book/Desktop/chat/proj/third_party/Crow/include/crow/http_connection.h:
 
@@ -1518,6 +1646,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/predef/platform/windows_desktop.h:
 
+/usr/include/x86_64-linux-gnu/bits/param.h:
+
 /usr/include/boost/predef/platform/windows_uwp.h:
 
 /usr/include/boost/predef/platform/mingw.h:
@@ -1540,6 +1670,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/predef/detail/os_detected.h:
 
+/usr/include/x86_64-linux-gnu/asm/param.h:
+
 /usr/include/boost/predef/os/linux.h:
 
 /usr/include/boost/predef/os/irix.h:
@@ -1560,6 +1692,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/predef/os/macos.h:
 
+/usr/include/mysql/mysql_version.h:
+
 /usr/include/boost/predef/os/bsd.h:
 
 /usr/include/boost/predef/os/beos.h:
@@ -1577,6 +1711,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/boost/predef/library/std/roguewave.h:
 
 /usr/include/boost/predef/library/std/msl.h:
+
+/usr/include/mysql/errmsg.h:
 
 /usr/include/boost/predef/library/std/modena.h:
 
@@ -1720,6 +1856,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/mpl/aux_/largest_int.hpp:
 
+/usr/include/x86_64-linux-gnu/sys/param.h:
+
 /usr/include/boost/asio/basic_stream_socket.hpp:
 
 /usr/include/boost/asio/detail/executor_op.hpp:
@@ -1727,6 +1865,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/nlohmann/detail/output/serializer.hpp:
 
 /usr/include/boost/mpl/aux_/value_wknd.hpp:
+
+/usr/include/mysql/field_types.h:
 
 /usr/include/boost/asio/traits/submit_free.hpp:
 
@@ -1942,6 +2082,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/asio/detail/impl/posix_thread.ipp:
 
+/usr/include/c++/11/bits/regex_automaton.tcc:
+
 /usr/include/boost/asio/execution/schedule.hpp:
 
 /usr/include/c++/11/bits/vector.tcc:
@@ -1969,6 +2111,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/c++/11/bits/stl_heap.h:
 
 /usr/include/boost/asio/execution/receiver_invocation_error.hpp:
+
+/home/book/Desktop/chat/proj/include/storage/mysql_client.h:
 
 /usr/include/boost/asio/detail/atomic_count.hpp:
 
@@ -2125,6 +2269,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/boost/mpl/aux_/has_apply.hpp:
 
 /usr/include/boost/asio/detail/eventfd_select_interrupter.hpp:
+
+/usr/include/c++/11/bits/regex.tcc:
 
 /usr/include/boost/asio/ip/v6_only.hpp:
 
@@ -2284,6 +2430,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/x86_64-linux-gnu/bits/statx.h:
 
+/usr/include/c++/11/bits/regex_scanner.tcc:
+
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/c++/11/climits:
@@ -2326,6 +2474,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/res_state.h:
+
 /usr/include/asm-generic/socket.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
@@ -2337,6 +2487,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/linux/errno.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
+
+/home/book/Desktop/chat/proj/include/storage/redis_client.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
 
@@ -2398,6 +2550,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/asio/require.hpp:
 
+/usr/include/mysql/udf_registration_types.h:
+
 /usr/include/x86_64-linux-gnu/asm/ioctls.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
@@ -2455,6 +2609,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/boost/predef/language/objc.h:
 
 /usr/include/c++/11/tuple:
+
+/usr/include/mysql/mysql_com.h:
 
 /usr/include/net/if.h:
 
@@ -2546,6 +2702,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
+/usr/include/c++/11/bits/regex.h:
+
 /usr/include/boost/predef/library/std/stdcpp3.h:
 
 /usr/include/boost/type_traits/integral_constant.hpp:
@@ -2579,6 +2737,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/errno.h:
 
 /usr/include/nlohmann/detail/conversions/to_json.hpp:
+
+/usr/include/c++/11/regex:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
@@ -2668,6 +2828,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/asio/execution/detail/as_invocable.hpp:
 
+/usr/include/c++/11/bits/stl_list.h:
+
 /usr/include/boost/asio/connect.hpp:
 
 /usr/include/boost/asio/detail/impl/posix_mutex.ipp:
@@ -2707,6 +2869,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/boost/asio/local/detail/impl/endpoint.ipp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
+
+/usr/include/c++/11/bits/stl_multiset.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -2876,6 +3040,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/c++/11/random:
 
+/usr/include/x86_64-linux-gnu/bits/mman-shared.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
@@ -2913,6 +3079,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
 /usr/include/linux/stddef.h:
+
+/home/book/Desktop/chat/proj/third_party/cpp-httplib/httplib.h:
 
 /usr/include/c++/11/bits/refwrap.h:
 
@@ -3026,6 +3194,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/asio/detail/impl/timer_queue_set.ipp:
 
+/usr/include/mysql/client_plugin.h:
+
 /usr/include/boost/predef/os.h:
 
 /usr/include/x86_64-linux-gnu/sys/timerfd.h:
@@ -3091,6 +3261,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
+
+/usr/include/asm-generic/param.h:
 
 /usr/include/c++/11/limits:
 
@@ -3284,6 +3456,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/smart_ptr/detail/yield_k.hpp:
 
+/usr/include/mysql/plugin_auth_common.h:
+
 /usr/include/boost/smart_ptr/detail/sp_thread_pause.hpp:
 
 /usr/include/c++/11/bits/align.h:
@@ -3440,8 +3614,6 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/preprocessor/punctuation/comma.hpp:
 
-/home/book/Desktop/chat/proj/include/api/download_manager.h:
-
 /usr/include/boost/mpl/aux_/config/static_constant.hpp:
 
 /usr/include/boost/mpl/aux_/na_fwd.hpp:
@@ -3477,6 +3649,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/boost/preprocessor/comma_if.hpp:
 
 /usr/include/boost/preprocessor/punctuation/comma_if.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
 
 /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
 
@@ -3516,6 +3690,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/boost/preprocessor/logical/bitand.hpp:
 
+/usr/include/c++/11/set:
+
 /usr/include/boost/preprocessor/identity.hpp:
 
 /usr/include/boost/preprocessor/empty.hpp:
@@ -3543,6 +3719,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/boost/asio/impl/write.hpp:
 
 /usr/include/boost/preprocessor/tuple/elem.hpp:
+
+/usr/include/c++/11/deque:
 
 /usr/include/boost/asio/posix/basic_descriptor.hpp:
 
@@ -3589,6 +3767,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/c++/11/bits/stl_pair.h:
 
 /usr/include/boost/preprocessor/array/elem.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/mman-linux.h:
 
 /usr/include/boost/preprocessor/array/data.hpp:
 
@@ -3650,6 +3830,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 
 /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
 
+/usr/include/c++/11/bits/regex_error.h:
+
 /usr/include/boost/numeric/conversion/detail/sign_mixture.hpp:
 
 /usr/include/boost/asio/ip/bad_address_cast.hpp:
@@ -3677,6 +3859,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/boost/asio/ip/basic_resolver_query.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/times.hpp:
+
+/usr/include/mysql/my_list.h:
 
 /usr/include/boost/asio/steady_timer.hpp:
 
@@ -3737,6 +3921,8 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o: /home/book/Desktop/chat/p
 /usr/include/x86_64-linux-gnu/bits/termios-struct.h:
 
 /usr/include/boost/predef/architecture/x86/32.h:
+
+/usr/local/include/hiredis/read.h:
 
 /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
 

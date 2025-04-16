@@ -2,6 +2,9 @@
 /home/book/Desktop/chat/proj/build/CMakeFiles/rebuild_cache.dir
 /home/book/Desktop/chat/proj/build/src/CMakeFiles/edit_cache.dir
 /home/book/Desktop/chat/proj/build/src/CMakeFiles/rebuild_cache.dir
+/home/book/Desktop/chat/proj/build/src/common/CMakeFiles/common.dir
+/home/book/Desktop/chat/proj/build/src/common/CMakeFiles/edit_cache.dir
+/home/book/Desktop/chat/proj/build/src/common/CMakeFiles/rebuild_cache.dir
 /home/book/Desktop/chat/proj/build/src/storage/CMakeFiles/storage.dir
 /home/book/Desktop/chat/proj/build/src/storage/CMakeFiles/edit_cache.dir
 /home/book/Desktop/chat/proj/build/src/storage/CMakeFiles/rebuild_cache.dir
@@ -9,6 +12,7 @@
 /home/book/Desktop/chat/proj/build/src/api/CMakeFiles/download.dir
 /home/book/Desktop/chat/proj/build/src/api/CMakeFiles/upload_manager.dir
 /home/book/Desktop/chat/proj/build/src/api/CMakeFiles/download_manager.dir
+/home/book/Desktop/chat/proj/build/src/api/CMakeFiles/delete.dir
 /home/book/Desktop/chat/proj/build/src/api/CMakeFiles/edit_cache.dir
 /home/book/Desktop/chat/proj/build/src/api/CMakeFiles/rebuild_cache.dir
 /home/book/Desktop/chat/proj/build/src/datanode/CMakeFiles/local_node_info.dir

@@ -1282,6 +1282,7 @@ src/datanode/CMakeFiles/datanode_main.dir/datanode_main.cpp.o: /home/book/Deskto
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/this_thread_sleep.h \
   /home/book/Desktop/chat/proj/include/api/download_manager.h \
+  /home/book/Desktop/chat/proj/include/storage/file_manager.h \
   /home/book/Desktop/chat/proj/include/datanode/heartbeat_client.h \
   /usr/local/include/muduo/base/Logging.h \
   /usr/local/include/muduo/base/LogStream.h \
@@ -2729,6 +2730,8 @@ src/datanode/CMakeFiles/datanode_main.dir/heartbeat_client.cpp.o: /home/book/Des
 /usr/include/c++/11/bits/allocator.h:
 
 /usr/include/linux/limits.h:
+
+/home/book/Desktop/chat/proj/include/storage/file_manager.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 

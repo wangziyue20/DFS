@@ -44,6 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/book/Desktop/chat/proj/build/src/common/cmake_install.cmake")
   include("/home/book/Desktop/chat/proj/build/src/storage/cmake_install.cmake")
   include("/home/book/Desktop/chat/proj/build/src/api/cmake_install.cmake")
   include("/home/book/Desktop/chat/proj/build/src/datanode/cmake_install.cmake")

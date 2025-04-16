@@ -1,12 +1,11 @@
-// #include <curl/curl.h>
 #include <iostream>
-// #include <nlohmann/json.hpp>
+#include <uuid/uuid.h>
 
+#include "calculateSHA.h"
 #include "crow.h"
 #include "httplib.h"
+#include "mysql_client.h"
 #include "node_selector.h"
-// #include "upload_manager.h"
-// #include "node_register.h"
 
 int main() {
   crow::SimpleApp app;
@@ -20,15 +19,65 @@ int main() {
         }
 
         dfs::NodeSelector selector("http://127.0.0.1:8080/get_nodes");
-        dfs::NodeInfo node = selector.select();
+        // std::vector<dfs::NodeInfo> nodes = selector.selectN(3);
+        std::vector<dfs::NodeInfo> nodes = selector.selectAll();
 
-        httplib::Client client(node.ip, node.port);
-        httplib::Headers headers = {{"filename", filename}};
-        auto res = client.Post("/internal_upload", headers, req.body,
-                               "application/octet-stream");
+        dfs::MySQLClient::FileMeta meta;
+        dfs::MySQLClient mysqlClient;
 
-        if (res && res->status == 200) {
-          return crow::response(200, res->body);
+        //使用同一个uuid
+        uuid_t uuid;
+        char uuid_filename[37];
+        uuid_generate(uuid);
+        uuid_unparse_lower(uuid, uuid_filename);
+
+        meta.filename = filename;
+        meta.uuid = uuid_filename;
+        meta.size = req.body.size();
+
+        std::string file_data = req.body;
+
+        // 上传时临时保存文件到磁盘，再用路径来计算 SHA256
+        std::string temp_path = "/tmp/" + std::string(uuid_filename);
+        std::ofstream temp_file(temp_path, std::ios::binary);
+        if (!temp_file) {
+          return crow::response(500, "Failed to write temp file >>>");
+        }
+        temp_file.write(req.body.c_str(), req.body.size());
+        temp_file.close();
+
+        std::string md5_checksum = dfs::calculateSHA256(temp_path);
+        meta.checksum = md5_checksum;
+
+        int success_count = 0;
+        int replica_required = 2;
+
+        for (const auto &node : nodes) {
+          httplib::Client client(node.ip, node.port);
+          httplib::Headers headers = {{"filename", filename},
+                                      {"uuid", uuid_filename}};
+
+          auto res = client.Post("/internal_upload", headers, req.body,
+                                 "application/octet-stream");
+
+          if (res && res->status == 200) {
+            dfs::MySQLClient::Replica r;
+            r.node_ip = node.ip;
+            r.node_port = node.port;
+
+            r.filepath = node.storage_path;
+            meta.replicas.push_back(r);
+            success_count++;
+          }
+          if (success_count >= replica_required) {
+            break;
+          }
+        }
+
+        if (success_count >= replica_required) {
+          mysqlClient.insertMetaData(meta);
+          return crow::response(200, "Upload seccess >>>");
+
         } else {
           return crow::response(500, "Forward upload failed >>>");
         }

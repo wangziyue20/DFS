@@ -61,4 +61,29 @@ NodeInfo NodeSelector::select() {
 
   return nodes[rand() % nodes.size()];
 }
+
+std::vector<NodeInfo> NodeSelector::selectN(int count) {
+  auto nodes = fetchNodes();
+
+  if (nodes.empty()) {
+    throw std::runtime_error("No available nodes >>>\n");
+  }
+
+  std::shuffle(nodes.begin(), nodes.end(),
+               std::mt19937{std::random_device{}()});
+  if (count > nodes.size()) {
+    count = nodes.size();
+  }
+
+  return std::vector<NodeInfo>(nodes.begin(), nodes.begin() + count);
+}
+
+std::vector<NodeInfo> NodeSelector::selectAll() {
+  auto nodes = fetchNodes();
+
+  if (nodes.empty()) {
+    throw std::runtime_error("No available nodes >>>\n");
+  }
+  return nodes;
+}
 } // namespace dfs

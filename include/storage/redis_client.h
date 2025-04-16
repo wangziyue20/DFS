@@ -11,6 +11,7 @@ public:
 
   void cacheMeta(const dfs::MySQLClient::FileMeta &meta, int ttl_seconds);
   MySQLClient::FileMeta getMetaData(const std::string &key);
+  bool removeCache(const std::string &key);
 
 private:
   redisContext *context_;

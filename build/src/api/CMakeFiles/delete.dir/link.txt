@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/delete.dir/delete_server.cpp.o -o delete  -Wl,-rpath,/usr/local/lib ../storage/libstorage.a -lmysqlclient /usr/local/lib/libhiredis.so 

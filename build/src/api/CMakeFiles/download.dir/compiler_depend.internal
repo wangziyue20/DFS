@@ -1282,7 +1282,69 @@ src/api/CMakeFiles/download.dir/download_server.cpp.o
  /home/book/Desktop/chat/proj/third_party/Crow/include/crow/app.h
  /usr/include/c++/11/thread
  /usr/include/c++/11/bits/this_thread_sleep.h
- /home/book/Desktop/chat/proj/include/api/download_manager.h
+ /home/book/Desktop/chat/proj/third_party/cpp-httplib/httplib.h
+ /usr/include/ifaddrs.h
+ /usr/include/resolv.h
+ /usr/include/x86_64-linux-gnu/sys/param.h
+ /usr/include/x86_64-linux-gnu/bits/param.h
+ /usr/include/linux/param.h
+ /usr/include/x86_64-linux-gnu/asm/param.h
+ /usr/include/asm-generic/param.h
+ /usr/include/arpa/nameser.h
+ /usr/include/arpa/nameser_compat.h
+ /usr/include/x86_64-linux-gnu/bits/types/res_state.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/c++/11/list
+ /usr/include/c++/11/bits/stl_list.h
+ /usr/include/c++/11/bits/list.tcc
+ /usr/include/c++/11/regex
+ /usr/include/c++/11/bitset
+ /usr/include/c++/11/stack
+ /usr/include/c++/11/deque
+ /usr/include/c++/11/bits/stl_deque.h
+ /usr/include/c++/11/bits/deque.tcc
+ /usr/include/c++/11/bits/stl_stack.h
+ /usr/include/c++/11/bits/regex_constants.h
+ /usr/include/c++/11/bits/regex_error.h
+ /usr/include/c++/11/bits/regex_automaton.h
+ /usr/include/c++/11/bits/regex_automaton.tcc
+ /usr/include/c++/11/bits/regex_scanner.h
+ /usr/include/c++/11/bits/regex_scanner.tcc
+ /usr/include/c++/11/bits/regex_compiler.h
+ /usr/include/c++/11/bits/regex_compiler.tcc
+ /usr/include/c++/11/bits/regex.h
+ /usr/include/c++/11/bits/regex.tcc
+ /usr/include/c++/11/bits/regex_executor.h
+ /usr/include/c++/11/bits/regex_executor.tcc
+ /usr/include/c++/11/set
+ /usr/include/c++/11/bits/stl_set.h
+ /usr/include/c++/11/bits/stl_multiset.h
+ /usr/include/c++/11/unordered_set
+ /usr/include/c++/11/bits/unordered_set.h
+ /home/book/Desktop/chat/proj/include/storage/mysql_client.h
+ /usr/include/mysql/mysql.h
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
+ /usr/include/mysql/field_types.h
+ /usr/include/mysql/my_list.h
+ /usr/include/mysql/mysql_com.h
+ /usr/include/mysql/my_command.h
+ /usr/include/mysql/my_compress.h
+ /usr/include/mysql/udf_registration_types.h
+ /usr/include/mysql/client_plugin.h
+ /usr/include/c++/11/stdlib.h
+ /usr/include/mysql/plugin_auth_common.h
+ /usr/include/mysql/mysql_version.h
+ /usr/include/mysql/mysql_time.h
+ /usr/include/mysql/errmsg.h
+ /home/book/Desktop/chat/proj/include/storage/redis_client.h
+ /usr/local/include/hiredis/hiredis.h
+ /usr/local/include/hiredis/read.h
+ /usr/local/include/hiredis/sds.h
+ /usr/local/include/hiredis/alloc.h
  /usr/include/nlohmann/json.hpp
  /usr/include/nlohmann/adl_serializer.hpp
  /usr/include/nlohmann/detail/conversions/from_json.hpp

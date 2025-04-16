@@ -24,16 +24,29 @@ MySQLClient::~MySQLClient() {
 void MySQLClient::insertMetaData(const FileMeta &file) {
   char query[1024];
   snprintf(query, sizeof(query),
-           "INSERT INTO file_metadata (id, filename, filepath, size, node_ip, "
-           "node_port) VALUES "
-           "('%s','%s', "
-           "'%s', "
-           "'%ld', '%s', '%d')",
-           file.uuid.c_str(), file.filename.c_str(), file.filepath.c_str(),
-           file.size, file.node_ip.c_str(), file.node_port);
+           "INSERT INTO file_metadata (id, filename, size, checksum) VALUES "
+           "('%s','%s','%ld', '%s')",
+           file.uuid.c_str(), file.filename.c_str(), file.size,
+           file.checksum.c_str());
 
   if (mysql_query(connection_, query)) {
-    std::cerr << "Insert failed: " << mysql_error(connection_) << std::endl;
+    std::cerr << "Insert file_metadata failed: " << mysql_error(connection_)
+              << std::endl;
+    return;
+  }
+
+  for (auto &replica : file.replicas) {
+    snprintf(query, sizeof(query),
+             "INSERT INTO file_replicas(file_id, node_ip, node_port, filepath) "
+             "VALUES ('%s', '%s', '%d','%s')",
+             file.uuid.c_str(), replica.node_ip.c_str(), replica.node_port,
+             replica.filepath.c_str());
+
+    if (mysql_query(connection_, query)) {
+      std::cerr << "Insert replica failed: " << mysql_error(connection_)
+                << std::endl;
+      return;
+    }
   }
 }
 
@@ -42,7 +55,7 @@ MySQLClient::FileMeta MySQLClient::getMetaData(const std::string &id) {
 
   char query[1024];
   snprintf(query, sizeof(query),
-           "SELECT filename, filepath, size, node_ip, node_port FROM "
+           "SELECT filename, size , checksum FROM "
            "file_metadata WHERE id "
            "= '%s'",
            id.c_str());
@@ -63,12 +76,64 @@ MySQLClient::FileMeta MySQLClient::getMetaData(const std::string &id) {
   MYSQL_ROW row = mysql_fetch_row(result);
   if (row != nullptr) {
     filemeta.filename = row[0] ? row[0] : "";
-    filemeta.filepath = row[1] ? row[1] : "";
-    filemeta.size = row[2] ? std::stoull(row[2]) : 0;
-    filemeta.node_ip = row[3] ? row[3] : "";
-    filemeta.node_port = row[4] ? std::stoi(row[4]) : 0;
+    filemeta.size = row[1] ? std::stoull(row[1]) : 0;
+    filemeta.checksum = row[2] ? row[2] : 0;
   }
+  mysql_free_result(result);
+
+  //查询副本
+  snprintf(query, sizeof(query),
+           "SELECT filepath, node_ip, node_port FROM "
+           "file_replicas WHERE file_id "
+           "= '%s'",
+           id.c_str());
+
+  if (mysql_query(connection_, query)) {
+    std::cerr << "get Replicas failed:>>>" << mysql_error(connection_)
+              << std::endl;
+    return filemeta;
+  }
+
+  result = mysql_store_result(connection_);
+  if (result == nullptr) {
+    std::cerr << "mysql_store_result failed:>>> " << mysql_error(connection_)
+              << std::endl;
+    return filemeta;
+  }
+
+  while ((row = mysql_fetch_row(result))) {
+    Replica r;
+    r.filepath = row[0];
+    r.node_ip = row[1];
+    r.node_port = std::stoi(row[2]);
+    filemeta.replicas.push_back(r);
+  }
+  mysql_free_result(result);
+
   filemeta.uuid = id;
   return filemeta;
+}
+
+bool MySQLClient::deleteMetaData(const std::string &id) {
+  char query[1024];
+  snprintf(query, sizeof(query), "DELETE FROM file_replicas WHERE file_id='%s'",
+           id.c_str());
+
+  if (mysql_query(connection_, query)) {
+    std::cerr << "DELETE FROM file_metadata failed: "
+              << mysql_error(connection_) << std::endl;
+    return false;
+  }
+
+  //删除file_metadata
+  snprintf(query, sizeof(query), "DELETE FROM file_metadata WHERE id='%s'",
+           id.c_str());
+
+  if (mysql_query(connection_, query)) {
+    std::cerr << "DELETE FROM file_metadata failed: "
+              << mysql_error(connection_) << std::endl;
+    return false;
+  }
+  return true;
 }
 } // namespace dfs

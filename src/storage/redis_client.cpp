@@ -21,10 +21,14 @@ void RedisClient::cacheMeta(const dfs::MySQLClient::FileMeta &meta,
                             int ttl_seconds = 0) {
   json js;
   js["filename"] = meta.filename;
-  js["filepath"] = meta.filepath;
   js["filesize"] = meta.size;
-  js["node_ip"] = meta.node_ip;
-  js["node_port"] = meta.node_port;
+  js["checksum"] = meta.checksum;
+
+  for (const auto &r : meta.replicas) {
+    js["replicas"].push_back({{"node_ip", r.node_ip},
+                              {"node_port", r.node_port},
+                              {"filepath", r.filepath}});
+  }
 
   std::string value = js.dump();
 
@@ -81,10 +85,16 @@ MySQLClient::FileMeta RedisClient::getMetaData(const std::string &key) {
     json js = json::parse(reply->str);
     meta.uuid = key;
     meta.filename = js["filename"];
-    meta.filepath = js["filepath"];
     meta.size = js["filesize"];
-    meta.node_ip = js["node_ip"];
-    meta.node_port = js["node_port"];
+    meta.checksum = js["checksum"];
+
+    for (const auto &r : js["replicas"]) {
+      dfs::MySQLClient::Replica replica;
+      replica.filepath = r["filepath"];
+      replica.node_ip = r["node_ip"];
+      replica.node_port = r["node_port"];
+      meta.replicas.push_back(replica);
+    }
   } catch (...) {
     std::cerr << "[Redis JSON parse error >>>]" << std::endl;
   }
@@ -92,5 +102,16 @@ MySQLClient::FileMeta RedisClient::getMetaData(const std::string &key) {
   freeReplyObject(reply);
 
   return meta;
+}
+
+bool RedisClient::removeCache(const std::string &key) {
+  redisReply *reply =
+      (redisReply *)redisCommand(context_, "DEL %s", key.c_str());
+
+  if (!reply) {
+    std::cerr << "Delete redisCache failed" << std::endl;
+    return false;
+  }
+  return true;
 }
 } // namespace dfs

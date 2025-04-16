@@ -1172,6 +1172,7 @@ src/datanode/CMakeFiles/datanode_main.dir/datanode_main.cpp.o: \
  /home/book/Desktop/chat/proj/third_party/Crow/include/crow/app.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/this_thread_sleep.h \
  /home/book/Desktop/chat/proj/include/api/download_manager.h \
+ /home/book/Desktop/chat/proj/include/storage/file_manager.h \
  /home/book/Desktop/chat/proj/include/datanode/heartbeat_client.h \
  /usr/local/include/muduo/base/Logging.h \
  /usr/local/include/muduo/base/LogStream.h \

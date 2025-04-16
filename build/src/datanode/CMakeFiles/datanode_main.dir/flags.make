@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DCROW_USE_BOOST
 
-CXX_INCLUDES = -I/home/book/Desktop/chat/proj/third_party/Crow/include -I/home/book/Desktop/chat/proj/include/datanode -I/home/book/Desktop/chat/proj/include/api -I/home/book/Desktop/chat/proj/include/storage -I/home/book/Desktop/chat/proj/include/master
+CXX_INCLUDES = -I/home/book/Desktop/chat/proj/third_party/Crow/include -I/home/book/Desktop/chat/proj/include/datanode -I/home/book/Desktop/chat/proj/include/api -I/home/book/Desktop/chat/proj/include/storage -I/home/book/Desktop/chat/proj/include/master -I/home/book/Desktop/chat/proj/include/common
 
 CXX_FLAGS = -g -std=gnu++17
 

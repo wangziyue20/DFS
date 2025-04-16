@@ -78,6 +78,7 @@ clean: src/clean
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
+src/all: src/common/all
 src/all: src/storage/all
 src/all: src/api/all
 src/all: src/datanode/all
@@ -85,6 +86,7 @@ src/all: src/master/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
+src/preinstall: src/common/preinstall
 src/preinstall: src/storage/preinstall
 src/preinstall: src/api/preinstall
 src/preinstall: src/datanode/preinstall
@@ -92,6 +94,7 @@ src/preinstall: src/master/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
+src/clean: src/common/clean
 src/clean: src/storage/clean
 src/clean: src/api/clean
 src/clean: src/datanode/clean
@@ -106,6 +109,7 @@ src/api/all: src/api/CMakeFiles/upload.dir/all
 src/api/all: src/api/CMakeFiles/download.dir/all
 src/api/all: src/api/CMakeFiles/upload_manager.dir/all
 src/api/all: src/api/CMakeFiles/download_manager.dir/all
+src/api/all: src/api/CMakeFiles/delete.dir/all
 .PHONY : src/api/all
 
 # Recursive "preinstall" directory target.
@@ -117,7 +121,23 @@ src/api/clean: src/api/CMakeFiles/upload.dir/clean
 src/api/clean: src/api/CMakeFiles/download.dir/clean
 src/api/clean: src/api/CMakeFiles/upload_manager.dir/clean
 src/api/clean: src/api/CMakeFiles/download_manager.dir/clean
+src/api/clean: src/api/CMakeFiles/delete.dir/clean
 .PHONY : src/api/clean
+
+#=============================================================================
+# Directory level rules for directory src/common
+
+# Recursive "all" directory target.
+src/common/all: src/common/CMakeFiles/common.dir/all
+.PHONY : src/common/all
+
+# Recursive "preinstall" directory target.
+src/common/preinstall:
+.PHONY : src/common/preinstall
+
+# Recursive "clean" directory target.
+src/common/clean: src/common/CMakeFiles/common.dir/clean
+.PHONY : src/common/clean
 
 #=============================================================================
 # Directory level rules for directory src/datanode
@@ -171,13 +191,39 @@ src/storage/clean: src/storage/CMakeFiles/storage.dir/clean
 .PHONY : src/storage/clean
 
 #=============================================================================
+# Target rules for target src/common/CMakeFiles/common.dir
+
+# All Build rule for target.
+src/common/CMakeFiles/common.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=1,2 "Built target common"
+.PHONY : src/common/CMakeFiles/common.dir/all
+
+# Build rule for subdir invocation for target.
+src/common/CMakeFiles/common.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/common/CMakeFiles/common.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 0
+.PHONY : src/common/CMakeFiles/common.dir/rule
+
+# Convenience name for target.
+common: src/common/CMakeFiles/common.dir/rule
+.PHONY : common
+
+# clean rule for target.
+src/common/CMakeFiles/common.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/clean
+.PHONY : src/common/CMakeFiles/common.dir/clean
+
+#=============================================================================
 # Target rules for target src/storage/CMakeFiles/storage.dir
 
 # All Build rule for target.
 src/storage/CMakeFiles/storage.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=18,19,20,21 "Built target storage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=22,23,24,25 "Built target storage"
 .PHONY : src/storage/CMakeFiles/storage.dir/all
 
 # Build rule for subdir invocation for target.
@@ -200,17 +246,18 @@ src/storage/CMakeFiles/storage.dir/clean:
 # Target rules for target src/api/CMakeFiles/upload.dir
 
 # All Build rule for target.
+src/api/CMakeFiles/upload.dir/all: src/common/CMakeFiles/common.dir/all
 src/api/CMakeFiles/upload.dir/all: src/storage/CMakeFiles/storage.dir/all
 src/api/CMakeFiles/upload.dir/all: src/datanode/CMakeFiles/selector.dir/all
 src/api/CMakeFiles/upload.dir/all: src/master/CMakeFiles/master.dir/all
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/upload.dir/build.make src/api/CMakeFiles/upload.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/upload.dir/build.make src/api/CMakeFiles/upload.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=22,23 "Built target upload"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=26,27 "Built target upload"
 .PHONY : src/api/CMakeFiles/upload.dir/all
 
 # Build rule for subdir invocation for target.
 src/api/CMakeFiles/upload.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/api/CMakeFiles/upload.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 0
 .PHONY : src/api/CMakeFiles/upload.dir/rule
@@ -233,7 +280,7 @@ src/api/CMakeFiles/download.dir/all: src/datanode/CMakeFiles/selector.dir/all
 src/api/CMakeFiles/download.dir/all: src/master/CMakeFiles/master.dir/all
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/download.dir/build.make src/api/CMakeFiles/download.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/download.dir/build.make src/api/CMakeFiles/download.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=4,5 "Built target download"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=8,9 "Built target download"
 .PHONY : src/api/CMakeFiles/download.dir/all
 
 # Build rule for subdir invocation for target.
@@ -262,7 +309,7 @@ src/api/CMakeFiles/upload_manager.dir/all: src/datanode/CMakeFiles/selector.dir/
 src/api/CMakeFiles/upload_manager.dir/all: src/master/CMakeFiles/master.dir/all
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/upload_manager.dir/build.make src/api/CMakeFiles/upload_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/upload_manager.dir/build.make src/api/CMakeFiles/upload_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=24,25 "Built target upload_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=28,29 "Built target upload_manager"
 .PHONY : src/api/CMakeFiles/upload_manager.dir/all
 
 # Build rule for subdir invocation for target.
@@ -285,17 +332,18 @@ src/api/CMakeFiles/upload_manager.dir/clean:
 # Target rules for target src/api/CMakeFiles/download_manager.dir
 
 # All Build rule for target.
+src/api/CMakeFiles/download_manager.dir/all: src/common/CMakeFiles/common.dir/all
 src/api/CMakeFiles/download_manager.dir/all: src/storage/CMakeFiles/storage.dir/all
 src/api/CMakeFiles/download_manager.dir/all: src/datanode/CMakeFiles/selector.dir/all
 src/api/CMakeFiles/download_manager.dir/all: src/master/CMakeFiles/master.dir/all
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/download_manager.dir/build.make src/api/CMakeFiles/download_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/download_manager.dir/build.make src/api/CMakeFiles/download_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=6,7 "Built target download_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=10,11 "Built target download_manager"
 .PHONY : src/api/CMakeFiles/download_manager.dir/all
 
 # Build rule for subdir invocation for target.
 src/api/CMakeFiles/download_manager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/api/CMakeFiles/download_manager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 0
 .PHONY : src/api/CMakeFiles/download_manager.dir/rule
@@ -310,13 +358,39 @@ src/api/CMakeFiles/download_manager.dir/clean:
 .PHONY : src/api/CMakeFiles/download_manager.dir/clean
 
 #=============================================================================
+# Target rules for target src/api/CMakeFiles/delete.dir
+
+# All Build rule for target.
+src/api/CMakeFiles/delete.dir/all: src/storage/CMakeFiles/storage.dir/all
+	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/delete.dir/build.make src/api/CMakeFiles/delete.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/delete.dir/build.make src/api/CMakeFiles/delete.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=6,7 "Built target delete"
+.PHONY : src/api/CMakeFiles/delete.dir/all
+
+# Build rule for subdir invocation for target.
+src/api/CMakeFiles/delete.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/api/CMakeFiles/delete.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 0
+.PHONY : src/api/CMakeFiles/delete.dir/rule
+
+# Convenience name for target.
+delete: src/api/CMakeFiles/delete.dir/rule
+.PHONY : delete
+
+# clean rule for target.
+src/api/CMakeFiles/delete.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/api/CMakeFiles/delete.dir/build.make src/api/CMakeFiles/delete.dir/clean
+.PHONY : src/api/CMakeFiles/delete.dir/clean
+
+#=============================================================================
 # Target rules for target src/datanode/CMakeFiles/local_node_info.dir
 
 # All Build rule for target.
 src/datanode/CMakeFiles/local_node_info.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/datanode/CMakeFiles/local_node_info.dir/build.make src/datanode/CMakeFiles/local_node_info.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/datanode/CMakeFiles/local_node_info.dir/build.make src/datanode/CMakeFiles/local_node_info.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=8,9 "Built target local_node_info"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=12,13 "Built target local_node_info"
 .PHONY : src/datanode/CMakeFiles/local_node_info.dir/all
 
 # Build rule for subdir invocation for target.
@@ -339,6 +413,7 @@ src/datanode/CMakeFiles/local_node_info.dir/clean:
 # Target rules for target src/datanode/CMakeFiles/datanode_main.dir
 
 # All Build rule for target.
+src/datanode/CMakeFiles/datanode_main.dir/all: src/common/CMakeFiles/common.dir/all
 src/datanode/CMakeFiles/datanode_main.dir/all: src/storage/CMakeFiles/storage.dir/all
 src/datanode/CMakeFiles/datanode_main.dir/all: src/api/CMakeFiles/upload_manager.dir/all
 src/datanode/CMakeFiles/datanode_main.dir/all: src/api/CMakeFiles/download_manager.dir/all
@@ -347,12 +422,12 @@ src/datanode/CMakeFiles/datanode_main.dir/all: src/datanode/CMakeFiles/selector.
 src/datanode/CMakeFiles/datanode_main.dir/all: src/master/CMakeFiles/master.dir/all
 	$(MAKE) $(MAKESILENT) -f src/datanode/CMakeFiles/datanode_main.dir/build.make src/datanode/CMakeFiles/datanode_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/datanode/CMakeFiles/datanode_main.dir/build.make src/datanode/CMakeFiles/datanode_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=1,2,3 "Built target datanode_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=3,4,5 "Built target datanode_main"
 .PHONY : src/datanode/CMakeFiles/datanode_main.dir/all
 
 # Build rule for subdir invocation for target.
 src/datanode/CMakeFiles/datanode_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/datanode/CMakeFiles/datanode_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/book/Desktop/chat/proj/build/CMakeFiles 0
 .PHONY : src/datanode/CMakeFiles/datanode_main.dir/rule
@@ -373,7 +448,7 @@ src/datanode/CMakeFiles/datanode_main.dir/clean:
 src/datanode/CMakeFiles/selector.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/datanode/CMakeFiles/selector.dir/build.make src/datanode/CMakeFiles/selector.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/datanode/CMakeFiles/selector.dir/build.make src/datanode/CMakeFiles/selector.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=16,17 "Built target selector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=20,21 "Built target selector"
 .PHONY : src/datanode/CMakeFiles/selector.dir/all
 
 # Build rule for subdir invocation for target.
@@ -399,7 +474,7 @@ src/datanode/CMakeFiles/selector.dir/clean:
 src/master/CMakeFiles/master.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=10,11,12 "Built target master"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=14,15,16 "Built target master"
 .PHONY : src/master/CMakeFiles/master.dir/all
 
 # Build rule for subdir invocation for target.
@@ -425,7 +500,7 @@ src/master/CMakeFiles/master.dir/clean:
 src/master/CMakeFiles/master_server.dir/all: src/master/CMakeFiles/master.dir/all
 	$(MAKE) $(MAKESILENT) -f src/master/CMakeFiles/master_server.dir/build.make src/master/CMakeFiles/master_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/master/CMakeFiles/master_server.dir/build.make src/master/CMakeFiles/master_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=13,14,15 "Built target master_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/book/Desktop/chat/proj/build/CMakeFiles --progress-num=17,18,19 "Built target master_server"
 .PHONY : src/master/CMakeFiles/master_server.dir/all
 
 # Build rule for subdir invocation for target.
